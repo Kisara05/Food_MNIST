@@ -1,11 +1,13 @@
 # food-MNIST Dataset
 
 ## Introduction
+
 This data set consists of 10 food categories, with 5,000 images. For each class, 125 manually reviewed test images are provided as well as 375 training images. On purpose, the training images were not cleaned, and thus still contain some amount of noise. This comes mostly in the form of intense colors and sometimes wrong labels. All images were rescaled to have a maximum side length of 512 pixels.
 
 ![Food Categories](images/food-collage.jpg)
 
 ## Food Classes
+
 1. apple pie
 1. baby back ribs
 1. baklava
@@ -18,6 +20,7 @@ This data set consists of 10 food categories, with 5,000 images. For each class,
 1. breakfast burrito
 
 ## Directory Structure:
+
 ```
 food-MNIST/
     images/
@@ -30,16 +33,19 @@ food-MNIST/
         train.json
         train.txt
 ```
+
 ## APIs
 
 ### API 1: load_data(width, height)
 
- **Returns:**  
+**Returns:**  
 It returns two tuples
+
 1. x_train, x_test: uint8 array of RGB image data with shape (num_samples, width, height, 3) from the image_data_format backend setting o either channels_first or channels_last respectively.
 2. y_train, y_test: uint8 array of category labels (integers in range 0-9) with shape (num_samples,).
 
 ### API 2: labels()
+
 **Returns:** dictionary of labels
 
 ---
@@ -52,8 +58,9 @@ It returns two tuples
 ## Usage
 
 ### Download for custome usage
+
 ```
-git clone https://github.com/srohit0/food_mnist.git
+git clone https://github.com/Kisara05/Food_MNIST.git
 import mnist_food
 ...
 ...
@@ -61,16 +68,17 @@ import mnist_food
 labels_dict = food_mnist.labels()
 ```
 
-### Working with Colab 
+### Working with Colab
 
 1. Here is a simple [example of using food_mnist in google colab notebook](https://colab.research.google.com/drive/1Pad2yvBw21MVbyPLmKMPQbGMucAFg8YQ)
-2. Here is a complete [example of training food-MNIST dataset on a simple network with over 75% training accuracy](https://colab.research.google.com/drive/1IMCmRKZuiEd5Gn4d16AY31hNnu_k__NG#scrollTo=a5mrxXuz8KHK)
-
+2. Here is a complete [example of training food-MNIST dataset on a simple network with over 75% training accuracy](https://colab.research.google.com/drive/1ixB2G32dsRo-3138lGWoYRsIYQbAn8L-#scrollTo=en_XPFLi94W6)
 
 ## Reference
+
 Original paper on [Food-101 – Mining Discriminative Components with Random Forests](https://www.vision.ee.ethz.ch/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf)
 
 ### Disclaimer
+
 This dataset was created out of necessity to train food-samples on smaller machine with under 8GB RAM. Source of this dataset is [Food-101 dataset](http://data.vision.ee.ethz.ch/cvl/food-101.tar.gz)
 
 **Credit:**
